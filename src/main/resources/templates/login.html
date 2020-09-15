@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <link rel="icon" type="image/png" href="img/eviDataLogo.png" />
+    <title>Login </title>
+
+    <link rel="stylesheet" href="/css/login.css"/>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div th:if="${param.logout}">
+    You have been logged out.
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form th:action="@{/login}" method="POST" class="form-signin" role="form">
+
+                <p style="text-align: center">
+                    <img src="img/login.png" style="width: 90px">
+                </p>
+
+                <h3 class="form-signin-heading" th:text="Login">Login Page</h3>
+                <br/>
+
+                <div class="form-group">
+                    <label for="username">Username</label>:
+                    <input type="text"
+                           id="username"
+                           name="username"
+                           class="form-control"
+                           autofocus="autofocus"
+                           placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>:
+                    <input type="password"
+                           id="password"
+                           name="password"
+                           class="form-control"
+                           placeholder="Password">
+                </div>
+
+
+                <div align="left" th:if="${param.error}">
+                    <p style="font-size: 20; color: #FF1C19;">User or Password invalid, please verify</p>
+                </div>
+
+                <div class="login-help">
+                    <a href="/registration">Register</a>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-3 col-sm-offset-3 pull-right">
+                            <input type="submit"
+                                   name="login-submit"
+                                   id="login-submit"
+                                   class="form-control btn btn-info"
+                                   value="Log In">
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

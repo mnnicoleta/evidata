@@ -1,0 +1,26 @@
+.welcome-container {
+    background-image: url("/img/lab.jpg");
+    height: 600px;
+}
+
+@media (min-height: 800px) {
+    .welcome-container {
+        height: 700px;
+    }
+}
+
+@media (max-height: 700px) {
+    .welcome-container {
+        height: 600px;
+    }
+}
+
+@media (max-height: 400px) {
+    .welcome-container {
+        height: 400px;
+    }
+}
+
+body{
+    overflow-y: hidden !important;
+}

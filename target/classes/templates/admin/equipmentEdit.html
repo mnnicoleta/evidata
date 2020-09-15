@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/base}"
+      th:with="activeTab='equipments'">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{equipment.edit.label}">Equipment edit</title>
+</head>
+<body>
+<div layout:fragment="page_content" id="page_content">
+
+    <h3 th:text="#{equipment.edit.label}">Equipment Edit</h3>
+
+    <form class="form-group" action="/admin/equipmentEdit" th:action="@{/admin/equipmentEdit}" method="post">
+        <input th:type="hidden" name="id" th:field="${equipment.id}"/>
+        <div class="form-group">
+            <label for="title" th:text="#{name.label}">Name</label>
+            <input name="text" class="form-control" id="title" th:field="${equipment.name}"/>
+            <label th:if="${#fields.hasErrors('equipment.name')}" th:errors="*{equipment.name}"
+                   class="validation-message" th:text="#{equipment.name.validateName}"></label>
+        </div>
+        <button name="submit" class="btn btn-primary" th:text="#{save.label}">Save</button>
+        <a href="#" th:href="@{/admin/equipmentList}" class="btn btn-danger" role="button" th:text="#{cancel.label}">Cancel</a>
+    </form>
+
+</div>
+
+</body>
+</html>

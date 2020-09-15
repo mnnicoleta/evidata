@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+
+    <link rel="shortcut icon" type="image/png" th:href="@{/img/eviDataLogo.png}"/>
+
+    <!--
+    <link rel="icon" type="image/png" href="img/eviDataLogo.png" />
+    -->
+
+    <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE"></title>
+
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/webjars/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css"/>
+    <script type="text/javascript" src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="/js/datepicker-settings.js"></script>
+</head>
+<body>
+<nav th:replace="fragments/navbar :: navbar(${activeTab})">&nbsp;</nav>
+
+<div class="container" style="margin-top: 45px;">
+    <div class="content">
+        <div layout:fragment="page_content"></div>
+    </div>
+</div>
+
+<th:block layout:fragment="scripts">
+</th:block>
+
+
+<div th:replace="fragments/footer :: footer">&nbsp;</div>
+
+<div th:replace="fragments/confirmation :: confirmation('Confirmation','Do you really want to delete selected item?')">
+    &nbsp;
+</div>
+</body>
+</html>

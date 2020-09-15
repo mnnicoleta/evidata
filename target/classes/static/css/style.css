@@ -1,0 +1,67 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #0d0c2d;
+    color: #337ab7;
+    text-align: center;
+}
+
+.validation-message{
+    color: red;
+}
+
+.evidata .navbar-toggle .icon-bar {
+    background-color: cyan;
+}
+
+h3{
+    margin-bottom: 20px !important;
+}
+
+.evidata .navbar-brand {
+    padding: 5px;
+}
+.evidata .navbar-brand>img {
+    height: 100%;
+    padding: 2px;
+    width: auto;
+}
+
+.page-item a.active{
+    font-weight: bold;
+    color: black;
+}
+
+table.evidata-table{
+    border: 1px solid #d0d0d0;
+}
+table.evidata-table th{
+    font-weight: bold;
+    padding: 5px 5px;
+    border-right: 1px solid #d0d0d0;
+    border-bottom: 1px solid #d0d0d0;
+}
+table.evidata-table th:last-child{
+    border-right: none;
+}
+table.evidata-table td{
+    padding: 5px 5px;
+    border-right: 1px solid #d0d0d0;
+    border-bottom: 1px solid #d0d0d0;
+}
+table.evidata-table td:last-child{
+    border-right: none;
+}
+
+table.evidata-table tr:last-child td{
+    border-bottom: none;
+}
+table.evidata-table td.td-label{
+    font-weight: bold;
+}
+.about{
+    text-align: center;
+
+}

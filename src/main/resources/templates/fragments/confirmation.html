@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Confirmation</title>
+</head>
+<body>
+<div th:fragment="confirmation (header, message)" th:if="${!#strings.isEmpty(header) and !#strings.isEmpty(message)}"
+     id="modal1" class="modal fade" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header"><a class="close" data-dismiss="modal">×</a>
+                <h3><span th:text="${header}">Test</span></h3>
+            </div>
+            <div class="modal-body"><span th:text="${message}">Test</span></div>
+            <div class="modal-footer">
+                <a href="#!" class="btn" data-dismiss="modal">No</a>
+                <a href="#!" id="okButton" class="btn btn-primary">Yes</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

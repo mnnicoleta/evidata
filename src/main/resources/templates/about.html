@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/base}"
+      th:with="activeTab='about',alertType='',alertMessage='',confirmHeader='',confirmMessage=''">
+
+<head>
+    <title th:text="#{about.label}">About</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/about.css}"/>
+</head>
+
+<div layout:fragment="page_content" id="page_content">
+    <div class="about">
+    <h2>EvidenceData</h2>
+        <img src="/img/eviDataLogo.png">
+        <p th:text="#{version.label}"> version 1.0</p>
+       <!-- <p th:text="#{author.label}"> Author: Nicoleta Manea</p>
+       -->
+    </div>
+</div>
+
+
+<th:block layout:fragment="scripts">
+    <script type="text/javascript">
+    </script>
+</th:block>
+
+</html>
