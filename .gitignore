@@ -1,5 +1,5 @@
 # Default ignored files
-/idea
-target
-/log
+/.idea
+/target
+.log
 *.iml
